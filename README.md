@@ -9,7 +9,7 @@ A modern, responsive developer portfolio built with **React + Vite + Tailwind CS
 - 🌙 Light/dark mode toggle (respects system preference, persists choice)
 - 📱 Fully responsive with a mobile nav menu
 - ♿️ Accessible, semantic markup
-- 🧩 Sections: Hero, About, Skills, Experience, Projects, Contact
+- 🧩 Sections: Hero, About, Skills, Experience, Projects, Education & Achievements, Contact
 - 📝 All content lives in one editable file: `src/data.js`
 
 ## Getting started

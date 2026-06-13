@@ -1,129 +1,196 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Portfolio content — edit everything here to make this site your own.
-// Placeholder text is used where real details aren't available yet.
+// Portfolio content for Mohamed Lotfi — sourced from CV.
+// Edit anything here to update the site.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const profile = {
   name: "Mohamed Lotfi",
-  role: "Full-Stack Developer",
+  role: "Software Development Engineer",
   tagline:
-    "I build fast, accessible, and delightful web applications from front to back.",
-  location: "Remote · Worldwide",
+    "I design and build scalable backend systems, microservices, and distributed applications with .NET Core — practiced in Clean Architecture, CQRS, and cloud-native deployment on AWS.",
+  location: "Cairo, Egypt",
   email: "mohamed.lotfi.dev@gmail.com",
+  phone: "+20 103 028 6574",
+  photo: "/profile.jpg",
   resumeUrl: "#", // drop a link to your PDF resume here
   socials: {
     github: "https://github.com/lotfi029",
-    linkedin: "https://www.linkedin.com/",
-    twitter: "https://twitter.com/",
+    linkedin: "https://www.linkedin.com/in/mohamedlotf/",
   },
 }
 
 export const about = {
   paragraphs: [
-    "I'm a full-stack developer who loves turning ideas into polished products. My focus is on clean architecture, performance, and user experience — shipping software that's a pleasure to use and to maintain.",
-    "I work comfortably across the stack: building responsive interfaces with React, designing robust APIs, and deploying to the cloud. I care deeply about code quality, testing, and clear communication.",
-    "When I'm not coding, I'm exploring new tech, contributing to open source, and continuously sharpening my craft.",
+    "I'm a Software Development Engineer with strong CS fundamentals in OOP, algorithms, and data structures — an ECPC Finalist with 600+ competitive-programming problems solved.",
+    "I have hands-on experience in .NET Core, microservices, and distributed systems, and I'm practiced in TDD, CI/CD, Clean Architecture, and cloud-native deployment with Docker and Kubernetes on AWS.",
+    "I'm passionate about building reliable payment and fintech solutions that scale to millions of users, with a proven track record of improving performance and maintainability on production systems.",
   ],
   highlights: [
-    { value: "5+", label: "Years of experience" },
-    { value: "30+", label: "Projects shipped" },
-    { value: "15+", label: "Happy clients" },
+    { value: "600+", label: "Problems solved" },
+    { value: "ECPC '24", label: "Programming finalist" },
+    { value: "1,000+", label: "Users served" },
+    { value: "30%", label: "Faster APIs" },
   ],
 }
 
 export const skills = [
   {
-    category: "Frontend",
-    items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vite", "Redux"],
+    category: "Languages",
+    items: ["C#", "SQL", "Python", "JavaScript", "TypeScript"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "REST APIs", "GraphQL", "WebSockets"],
+    items: [
+      ".NET Core",
+      "ASP.NET Core",
+      "REST APIs",
+      "Microservices",
+      "CQRS",
+      "DDD",
+      "Clean Architecture",
+      "SOA",
+      "gRPC",
+    ],
   },
   {
-    category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "MySQL"],
+    category: "Frontend",
+    items: ["React.js", "Angular"],
   },
   {
-    category: "DevOps & Tools",
-    items: ["Docker", "Git", "CI/CD", "AWS", "Vercel", "Linux"],
+    category: "Data Access",
+    items: [
+      "EF Core",
+      "Dapper",
+      "PostgreSQL",
+      "SQL Server",
+      "MongoDB",
+      "Redis",
+      "Elasticsearch",
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    items: [
+      "AWS (EKS, EC2, RDS, SQS/SNS, IAM)",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "Jenkins",
+    ],
+  },
+  {
+    category: "Practices & Tools",
+    items: [
+      "TDD",
+      "Code Reviews",
+      "CI/CD",
+      "Unit & Integration Testing",
+      "Design Patterns",
+      "Git",
+      "Linux",
+    ],
   },
 ]
 
 export const experience = [
   {
-    role: "Senior Full-Stack Developer",
-    company: "Tech Company",
-    period: "2023 — Present",
+    role: "Cloud Solution Architect Intern",
+    company: "National Telecommunication Institute (NTI)",
+    period: "Jan 2026 — May 2026",
     description:
-      "Lead development of scalable web applications, mentor junior engineers, and drive architecture decisions across frontend and backend services.",
+      "Worked on production-grade, cloud-native deployments and infrastructure.",
     achievements: [
-      "Reduced page load time by 45% through code-splitting and caching strategies.",
-      "Designed and shipped a microservices-based API serving millions of requests.",
-      "Established testing and CI/CD pipelines that cut deployment time in half.",
+      "Deployed and managed containerized .NET Core and cloud-native applications on Kubernetes; applied AWS IAM, VPC security groups, and least-privilege access patterns.",
+      "Practiced CI/CD pipelines with GitHub Actions and Jenkins; gained hands-on experience with service-oriented architecture across EC2, S3, RDS, and EKS.",
     ],
   },
   {
-    role: "Full-Stack Developer",
-    company: "Startup Inc.",
-    period: "2021 — 2023",
+    role: "Software Engineer / Technical Lead",
+    company: "Software Development Center — Kafr El-Sheikh University",
+    period: "Nov 2024 — Jun 2025",
     description:
-      "Built customer-facing features end to end, from database schema to pixel-perfect UI, in a fast-moving product team.",
+      "Led backend development and engineering practices for production systems.",
     achievements: [
-      "Delivered the core dashboard used daily by thousands of users.",
-      "Integrated third-party payment and authentication providers.",
-      "Improved test coverage from 20% to 80% across the codebase.",
+      "Architected and maintained .NET Core backend systems supporting 1,000+ users; reduced average API response time by 30% through query optimization and caching.",
+      "Led code reviews, enforced TDD practices, and refactored legacy components to Clean Architecture — improving testability, maintainability, and team velocity.",
+      "Mentored students as Technical Lead for .NET and SQL; organized and ran ACM-style programming contests.",
     ],
   },
   {
-    role: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2019 — 2021",
+    role: "Freelance Backend Developer",
+    company: "Remote",
+    period: "Jul 2025 — Oct 2025",
     description:
-      "Crafted responsive, accessible websites and web apps for a range of clients across industries.",
+      "Delivered targeted fixes and performance work on legacy .NET and SQL systems.",
     achievements: [
-      "Built 20+ client websites with a focus on performance and SEO.",
-      "Created a reusable component library adopted across projects.",
+      "Resolved 8+ critical bugs in .NET legacy systems and refactored 5K+ lines for improved stability and readability.",
+      "Optimized 10+ SQL Server stored procedures using advanced indexing and execution-plan analysis, reducing query latency by up to 20%.",
     ],
   },
 ]
 
 export const projects = [
   {
-    title: "Project One",
+    title: "Cloud-Native E-Commerce Platform",
     description:
-      "A full-featured SaaS dashboard with real-time analytics, role-based access control, and a polished, responsive UI.",
-    tags: ["React", "Node.js", "PostgreSQL", "Tailwind"],
-    demo: "#",
-    repo: "#",
+      "Distributed microservices (product, order, payment) deployed on EKS within a secured AWS VPC; event-driven with SQS/SNS, a hybrid data layer (RDS, DynamoDB, ElastiCache), Secrets Manager, ALB load balancing, and Auto Scaling.",
+    tags: [".NET Microservices", "AWS EKS", "SQS/SNS", "DDD", "Kubernetes"],
+    period: "Mar 2026 — May 2026",
+    repo: "https://github.com/lotfi029/ecommerce-cloud-native",
+    demo: "",
     featured: true,
   },
   {
-    title: "Project Two",
+    title: "Catalog Service",
     description:
-      "An e-commerce platform with cart, checkout, payment integration, and an admin panel for inventory management.",
-    tags: ["Next.js", "Stripe", "Prisma", "MongoDB"],
-    demo: "#",
-    repo: "#",
+      "Production-ready microservice applying CQRS with separate read/write models, optimized reads via Dapper, Redis caching, and full-text search via Elasticsearch — with structured logging and a full CI/CD pipeline.",
+    tags: ["CQRS", "Dapper", "Redis", "PostgreSQL", "Elasticsearch", "CI/CD"],
+    period: "Oct 2025 — Jan 2026",
+    repo: "https://github.com/lotfi029/CatalogService",
+    demo: "",
     featured: true,
   },
   {
-    title: "Project Three",
+    title: "Survey-Basket",
     description:
-      "A real-time collaboration tool with live editing, presence, and websocket-powered updates.",
-    tags: ["React", "WebSockets", "Express", "Redis"],
-    demo: "#",
-    repo: "#",
+      "Survey management platform built with TDD, background jobs via Hangfire, and Serilog structured logging; Repository, Unit-of-Work, and Result patterns ensure consistency across concurrent operations.",
+    tags: [".NET Core", "SQL Server", "Clean Architecture", "TDD", "Hangfire"],
+    period: "Dec 2024 — Jan 2025",
+    repo: "https://github.com/lotfi029/Survay-Basket",
+    demo: "",
     featured: false,
   },
   {
-    title: "Project Four",
+    title: "Social-Bridge",
     description:
-      "A mobile-first progressive web app for task management with offline support and push notifications.",
-    tags: ["TypeScript", "PWA", "IndexedDB"],
-    demo: "#",
-    repo: "#",
+      "AI-integrated full-stack platform for real-time, structured user interactions; a Clean Architecture .NET backend paired with a React frontend, designed for scalability and testability.",
+    tags: [".NET Core", "React", "AI Integration", "Clean Architecture"],
+    period: "Nov 2024 — Jun 2025",
+    repo: "https://github.com/lotfi029/Autine",
+    demo: "",
     featured: false,
+  },
+]
+
+export const education = [
+  {
+    school: "Kafr El-Sheikh University",
+    degree: "B.Sc. in Computer Science",
+    location: "Kafr El-Sheikh, Egypt",
+    period: "Sep 2021 — Jun 2025",
+  },
+]
+
+export const achievements = [
+  {
+    title: "ECPC Finalist 2024",
+    detail:
+      "Qualified to the finals of the Egyptian Collegiate Programming Contest (ICPC regional).",
+  },
+  {
+    title: "600+ Problems Solved",
+    detail:
+      "Solved 600+ competitive-programming problems, sharpening algorithms and data-structures skills.",
   },
 ]
 
@@ -132,5 +199,6 @@ export const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ]
