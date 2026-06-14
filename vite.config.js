@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // `base` must match the GitHub Pages project path: https://<user>.github.io/<repo>/
 export default defineConfig({
-  base: '/lotfi-portofli/',
+  base: '/portfolio/',
   plugins: [react(), tailwindcss()],
 })

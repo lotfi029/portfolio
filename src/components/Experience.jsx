@@ -1,7 +1,8 @@
-import { experience } from '../data'
+import { useContent } from '../content/ContentContext'
 import Section from './Section'
 
 export default function Experience() {
+  const { experience } = useContent()
   return (
     <Section id="experience" eyebrow="Where I've worked" title="Experience">
       <div className="relative border-l border-slate-200 pl-8 dark:border-slate-800">

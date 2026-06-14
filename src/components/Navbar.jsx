@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
-import { navLinks, profile } from '../data'
+import { navLinks } from '../content/defaults'
+import { useContent } from '../content/ContentContext'
 import { SunIcon, MoonIcon } from './Icons'
 
 export default function Navbar({ theme, toggleTheme }) {
+  const { profile } = useContent()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 

@@ -1,8 +1,9 @@
-import { profile } from '../data'
+import { useContent } from '../content/ContentContext'
 import Section from './Section'
 import { GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon } from './Icons'
 
 export default function Contact() {
+  const { profile } = useContent()
   return (
     <Section id="contact" eyebrow="Let's connect" title="Get In Touch">
       <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-brand-50/50 p-10 text-center shadow-sm dark:border-slate-800 dark:from-slate-900 dark:to-slate-900/50">

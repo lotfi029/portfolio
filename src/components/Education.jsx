@@ -1,8 +1,9 @@
-import { education, achievements } from '../data'
+import { useContent } from '../content/ContentContext'
 import Section from './Section'
 import { GradCapIcon, AwardIcon } from './Icons'
 
 export default function Education() {
+  const { education, achievements } = useContent()
   return (
     <Section id="education" eyebrow="Learning & recognition" title="Education & Achievements">
       <div className="grid gap-8 md:grid-cols-2">
