@@ -3,6 +3,8 @@
 // Edit anything here to update the site.
 // ─────────────────────────────────────────────────────────────────────────────
 
+import photoUrl from './assets/profile.jpg'
+
 export const profile = {
   name: "Mohamed Lotfi",
   role: "Software Development Engineer",
@@ -11,7 +13,7 @@ export const profile = {
   location: "Cairo, Egypt",
   email: "mohamed.lotfi.dev@gmail.com",
   phone: "+20 103 028 6574",
-  photo: "/profile.jpg",
+  photo: photoUrl,
   resumeUrl: "#", // drop a link to your PDF resume here
   socials: {
     github: "https://github.com/lotfi029",

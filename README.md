@@ -29,8 +29,20 @@ placeholder values (resume link, demo/repo URLs, social profiles) with your own.
 
 ## Deployment
 
-The site is fully static. Build with `npm run build` and deploy the `dist/`
-folder to any static host (Vercel, Netlify, GitHub Pages, Cloudflare Pages, etc.).
+This repo deploys automatically to **GitHub Pages** via GitHub Actions
+(`.github/workflows/deploy.yml`). Every push to `main` builds the site and
+publishes it to:
+
+> https://lotfi029.github.io/lotfi-portofli/
+
+One-time setup: in the repo, go to **Settings → Pages** and set
+**Source** to **GitHub Actions** (the workflow also attempts to enable this
+automatically on its first run).
+
+The `base` path in `vite.config.js` (`/lotfi-portofli/`) must match the
+repository name for assets to resolve correctly on Pages. The site is fully
+static, so it can also be deployed to any static host (Vercel, Netlify,
+Cloudflare Pages, etc.) — for those, set `base` back to `/`.
 
 ## Tech stack
 
