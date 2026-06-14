@@ -1,7 +1,8 @@
-import { skills } from '../data'
+import { useContent } from '../content/ContentContext'
 import Section from './Section'
 
 export default function Skills() {
+  const { skills } = useContent()
   return (
     <Section id="skills" eyebrow="What I work with" title="Skills & Technologies">
       <div className="grid gap-6 sm:grid-cols-2">

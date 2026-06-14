@@ -1,4 +1,4 @@
-import { projects } from '../data'
+import { useContent } from '../content/ContentContext'
 import Section from './Section'
 import { ExternalLinkIcon, GitHubIcon, CodeIcon } from './Icons'
 
@@ -50,6 +50,7 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const { projects } = useContent()
   return (
     <Section id="projects" eyebrow="Some things I've built" title="Projects">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">

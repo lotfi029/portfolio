@@ -1,7 +1,8 @@
-import { profile } from '../data'
+import { useContent } from '../content/ContentContext'
 import { GitHubIcon, LinkedInIcon, MailIcon } from './Icons'
 
 export default function Hero() {
+  const { profile } = useContent()
   return (
     <section
       id="home"

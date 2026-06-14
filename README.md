@@ -9,8 +9,9 @@ A modern, responsive developer portfolio built with **React + Vite + Tailwind CS
 - 🌙 Light/dark mode toggle (respects system preference, persists choice)
 - 📱 Fully responsive with a mobile nav menu
 - ♿️ Accessible, semantic markup
-- 🧩 Sections: Hero, About, Skills, Experience, Projects, Education & Achievements, Contact
-- 📝 All content lives in one editable file: `src/data.js`
+- 🧩 Sections: Hero, About, Mission, Skills, Experience, Projects, Education & Achievements, Contact
+- 📝 Content is data-driven (`public/content.json`, with `src/content/defaults.js` as fallback)
+- 🔐 Optional admin dashboard at `#admin` with secure login to edit everything
 
 ## Getting started
 
@@ -23,9 +24,34 @@ npm run preview  # preview the production build locally
 
 ## Customizing
 
-Edit **`src/data.js`** to update your name, bio, skills, work experience,
-projects, and social links — no component changes needed. Replace the
-placeholder values (resume link, demo/repo URLs, social profiles) with your own.
+The site renders from **`public/content.json`** (fetched at runtime), falling
+back to **`src/content/defaults.js`** if that file is missing. You can update
+content three ways:
+
+1. **Admin dashboard** (no code) — see below.
+2. Edit `public/content.json` directly and commit.
+3. Edit the baseline in `src/content/defaults.js`.
+
+## Admin dashboard
+
+The site includes a password-protected dashboard to edit every section
+(profile, mission, about, skills, experience, projects, education, achievements)
+with no code. Open `…/#admin` (also linked as "Admin" in the footer).
+
+Because the site is static, editing is backed by a small **authenticated backend**
+(`server/`) that commits your changes to `public/content.json` — which
+auto-redeploys the site. Setup:
+
+1. Deploy the backend in **`server/`** and set its env vars (admin
+   username/password, `JWT_SECRET`, and a GitHub token). See
+   [`server/README.md`](server/README.md).
+2. Add a GitHub **Actions Variable** `VITE_API_BASE_URL` = your backend URL,
+   then push to `main` (or re-run the deploy workflow) so the dashboard knows
+   where to call.
+3. Visit `…/#admin`, log in, edit, and **Save & publish**.
+
+Without the backend deployed, the dashboard still works in **export mode**: edit
+content and use **Download JSON** to grab an updated `content.json` to commit.
 
 ## Deployment
 
@@ -49,3 +75,5 @@ Cloudflare Pages, etc.) — for those, set `base` back to `/`.
 - [React 18](https://react.dev/)
 - [Vite 6](https://vite.dev/)
 - [Tailwind CSS 4](https://tailwindcss.com/)
+- Admin backend: [Express](https://expressjs.com/), JWT auth, and the
+  [GitHub REST API](https://docs.github.com/rest) (see `server/`)
