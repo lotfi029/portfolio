@@ -1,0 +1,48 @@
+# Render one-click deploy blueprint for the portfolio admin API.
+#
+# Usage:
+#   1. Push this repo to GitHub (already done).
+#   2. In Render, go to https://dashboard.render.com/blueprints and click
+#      "New Blueprint Instance" → pick this repo. Render reads this file from
+#      the `server/` directory and provisions the service.
+#   3. Render will prompt you for the values marked `sync: false` below — set
+#      ADMIN_USERNAME, ADMIN_PASSWORD (or ADMIN_PASSWORD_HASH), GITHUB_TOKEN,
+#      and ALLOWED_ORIGIN. JWT_SECRET is auto-generated.
+#   4. Deploy. Copy the service URL (e.g. https://xxx.onrender.com) and add it
+#      as the GitHub Actions Variable VITE_API_BASE_URL on the site repo.
+#
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: portfolio-admin-api
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      # Prefer this over ADMIN_PASSWORD: generate with `npm run hash -- 'your-password'`.
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_OWNER
+        value: lotfi029
+      - key: GITHUB_REPO
+        value: portfolio
+      - key: GITHUB_BRANCH
+        value: main
+      - key: CONTENT_PATH
+        value: public/content.json
+      # Restrict to your site origin in production (e.g. https://lotfi029.github.io).
+      - key: ALLOWED_ORIGIN
+        sync: false

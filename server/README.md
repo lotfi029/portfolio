@@ -47,11 +47,19 @@ npm start              # http://localhost:8787
 
 Any Node host works. The repo isn't tied to one platform.
 
-**Render** (example):
+**Render — one-click via blueprint** (recommended):
+1. Push this repo to GitHub (already done).
+2. In Render → **Blueprints → New Blueprint Instance** → pick this repo.
+   Render reads [`render.yaml`](render.yaml), provisions the free web service,
+   and prompts you for the secrets (admin credentials, GitHub token, allowed
+   origin). `JWT_SECRET` is auto-generated.
+3. Deploy → copy the service URL (e.g. `https://xxx.onrender.com`).
+
+**Render — manual** (alternative):
 1. New → Web Service → connect this repo, set **Root Directory** to `server`.
 2. Build command `npm install`, start command `npm start`.
 3. Add the environment variables from `.env.example` (use real secrets).
-4. Deploy → copy the service URL (e.g. `https://xxx.onrender.com`).
+4. Deploy → copy the service URL.
 
 **Railway / Fly.io / a VPS** work the same way — run `npm start` in `server/`
 with the env vars set.
