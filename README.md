@@ -59,13 +59,13 @@ This repo deploys automatically to **GitHub Pages** via GitHub Actions
 (`.github/workflows/deploy.yml`). Every push to `main` builds the site and
 publishes it to:
 
-> https://lotfi029.github.io/lotfi-portofli/
+> https://lotfi029.github.io/portfolio/
 
 One-time setup: in the repo, go to **Settings → Pages** and set
 **Source** to **GitHub Actions** (the workflow also attempts to enable this
 automatically on its first run).
 
-The `base` path in `vite.config.js` (`/lotfi-portofli/`) must match the
+The `base` path in `vite.config.js` (`/portfolio/`) must match the
 repository name for assets to resolve correctly on Pages. The site is fully
 static, so it can also be deployed to any static host (Vercel, Netlify,
 Cloudflare Pages, etc.) — for those, set `base` back to `/`.
